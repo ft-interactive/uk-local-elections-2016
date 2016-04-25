@@ -51,10 +51,12 @@
       font-weight: bold;
       text-align: right;
     }
-    .party__c {
+    .party__c,
+    .candidate__right {
       color: #1369bf;
     }
-    .party__lab {
+    .party__lab,
+    .candidate__left {
       color: #bf1f1f;
     }
     .party__ukip {
@@ -170,6 +172,9 @@
     .london {
       background: #fff6eb url(images/london.png) 5px 30px no-repeat;
     }
+    .london__mayor {
+      background: #fff6eb url(images/london-mayor.png) 0px 0px no-repeat;
+    }
     .linkbar {
       box-sizing: border-box;
       width: 100%;
@@ -203,16 +208,48 @@
       width: 15px;
       height: 15px;
     }
-
+  /* Rules for London Mayor */
+  .london__mayor .rule,
+  .london__mayor .party,
+  .london__mayor .labels__councils {
+    display: none;
+  }
+  .london__mayor .labels__seats {
+    margin-top: 6px;
+  }
+  .candidate {
+    display: none;
+  }
+  .london__mayor .candidate {
+    display: inline-block;
+    margin-top: 55px;
+    margin-left: 14px;
+  }
+  .candidate__name {
+    font-size: 12px;
+    color: #74736c;
+  }
+  .candidate__vote {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .candidate__left {
+    float: left;
+  }
+  .candidate__right {
+    float: right;
+    text-align: right;
+  }
   </style>
 
 
   <body>
     <div class="widget__results">
-      <div class="results scotland">
+      <div class="results london__mayor">
         <div class="labels">
           <div class="labels__title">English local authorities</div>
-          <div class="labels__seats">Seats<span class="labels__seats--label">128 voting (of 380)</span></div>
+          <div class="labels__seats">Share of vote</div>
+          <div class="labels__seats--label">first round (over 50% to win)</div>
           <div class="labels__councils">Councils</div>
         </div>
         <div class="party party__c">
@@ -241,7 +278,14 @@
           <div class="fig2">+11</div>
         </div>
         <div class="rule"></div>
-
+        <div class="candidate candidate__left">
+          <div class="candidate__name">Khan</div>
+          <div class="candidate__vote">56%</div>
+        </div>
+        <div class="candidate candidate__right">
+          <div class="candidate__name">Goldsmith</div>
+          <div class="candidate__vote">44%</div>
+        </div>
       </div>
       <a href="http://www.ft.com">
         <div class="linkbar">
