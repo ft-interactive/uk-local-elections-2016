@@ -1,0 +1,254 @@
+<html>
+  <head>
+    <title>UK local elections</title>
+  </head>
+  <style>
+    .widget__results {
+      width: 600px;
+      font-family: sans-serif;
+    }
+    .results {
+      box-sizing: border-box;
+      width: 100%;
+      height: 130px;
+      padding-top: 8px;
+    } 
+    .labels {
+      margin-left: 157px;
+      text-align: right;
+      float: left;
+      display: inline-block;
+      width: 110px;
+    }
+    .labels__title {
+      font-size: 19px;
+      line-height: 24px;
+      color: #333333;
+    }
+    .labels__seats,
+    .labels__councils {
+      color: #74736c;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    .england .labels__seats{
+      margin-top: 22px;
+    }
+    .england .labels__councils {
+      margin-top: 16px;
+    }
+    .labels__seats--label {
+      color: #a7a59b;
+      font-size: 10px;
+      display: block;
+    }
+    .party {
+      float: left;
+      display: inline-block;
+      margin-left: 24px;
+      margin-top: 7px;
+      font-size: 21px;
+      font-weight: bold;
+      text-align: right;
+    }
+    .party__c {
+      color: #1369bf;
+    }
+    .party__lab {
+      color: #bf1f1f;
+    }
+    .party__ukip {
+      color: #a34198;
+    }
+    .party__ld {
+      color: #c68024;
+    }
+    .party__snp {
+      color: #99891b;
+    }
+    .party__pc {
+      color: #54a19c;
+    }
+    .party__dup {
+      color: #443e71;
+    }
+    .party__sdlp {
+      color: #9cb157;
+    }
+    .party__sf {
+      color: #6a8d32;
+    }
+    .party__uup {
+      color: #1369bf;
+    }
+    .party__other {
+      color: #74736c;
+    }
+    .party .fig1 {
+      margin-top: 16px;
+    }
+    .party__other .logo {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 24px;
+      line-height: 63px;
+    }
+    .party .fig2 {
+      margin-top: 6px;
+    }
+    .party .logo {
+      width: 40px;
+      height: 40px;
+    }
+    .party__c .logo{
+      background:  url(images/c.png) no-repeat;
+    }
+    .party__lab .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/lab.png) no-repeat;
+    }
+    .party__ukip .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/ukip.png) no-repeat;
+    }
+    .party__snp .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/snp.png) no-repeat;
+    }
+    .party__ld .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/ld.png) no-repeat;
+    }
+    .party__pc .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/pc.png) no-repeat;
+    }
+    .party__dup .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/dup.png) no-repeat;
+    }
+    .party__sdlp .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/sdlp.png) no-repeat;
+    }
+    .party__sf .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/sf.png) no-repeat;
+    }
+    .party__uup .logo{
+      width: 40px;
+      height: 40px;
+      background:  url(images/uup.png) no-repeat;
+    }
+    .rule {
+      position: absolute;
+      width: 424px;
+      left: 170px;
+      top: 105px;
+      border-bottom: 1px dotted #cec6b9;
+    }
+    .england {
+      background: #fff6eb url(images/england.png) 5px 8px no-repeat;
+    }
+    .wales {
+      background: #fff6eb url(images/wales.png) 5px 8px no-repeat;
+    }
+    .scotland {
+      background: #fff6eb url(images/scotland.png) 5px 8px no-repeat;
+    }
+    .nireland {
+      background: #fff6eb url(images/nireland.png) 5px 8px no-repeat;
+    }
+    .london {
+      background: #fff6eb url(images/london.png) 5px 30px no-repeat;
+    }
+    .linkbar {
+      box-sizing: border-box;
+      width: 100%;
+      height: 25px;
+      background-color: #eeeeee;
+      border-bottom: 2px solid #dcd5cd;
+      padding-top: 5px;
+      padding-right: 5px;
+      transition: background-color 0.3s;
+    }
+    .linkbar:hover {
+      background-color: #dddddd;
+      transition: background-color 0s;
+    }
+
+    .linkbar p {
+      margin: 0;
+      padding: 0;
+      float: right;
+      font-size: 12px;
+    }
+
+    .linkbar p.link {
+      color: #528f9b;
+    }
+    .linkbar p.link:after {
+      content: " ";
+      background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=15&tint=27757b,27757b&source=ig_wrr') no-repeat center center;
+      background-size: 15px 15px;
+      float: right;
+      width: 15px;
+      height: 15px;
+    }
+
+  </style>
+
+
+  <body>
+    <div class="widget__results">
+      <div class="results scotland">
+        <div class="labels">
+          <div class="labels__title">English local authorities</div>
+          <div class="labels__seats">Seats<span class="labels__seats--label">128 voting (of 380)</span></div>
+          <div class="labels__councils">Councils</div>
+        </div>
+        <div class="party party__c">
+          <div class="logo"></div>
+          <div class="fig1">+21</div>
+          <div class="fig2">+11</div>
+        </div>
+        <div class="party party__lab">
+          <div class="logo"></div>
+          <div class="fig1">+21</div>
+          <div class="fig2">+11</div>
+        </div>
+        <div class="party party__ukip">
+          <div class="logo"></div>
+          <div class="fig1">+21</div>
+          <div class="fig2">+11</div>
+        </div>
+        <div class="party party__ld">
+          <div class="logo"></div>
+          <div class="fig1">+21</div>
+          <div class="fig2">+11</div>
+        </div>
+        <div class="party party__other">
+          <div class="logo">Other</div>
+          <div class="fig1">+21</div>
+          <div class="fig2">+11</div>
+        </div>
+        <div class="rule"></div>
+
+      </div>
+      <a href="http://www.ft.com">
+        <div class="linkbar">
+          <p class="link">Full coverage</p>
+        </div>
+      </a>
+
+    </div>
+  </body>
+</html>
